@@ -1,0 +1,47 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="predict(form.value)" class="offset-md-3 col-md-6 ">
+    <div class="row justify-content-center mt-5" style="margin: auto; ">
+
+      <h5 class="h5 h5-reponsive font-bold mt-5 wow fadeInDown text-center" data-wow-delay="0.3s">
+
+        <div style="width:300px; height: 250px;margin-top: 43px;" class="mx-auto">
+          <!-- Card -->
+          <mdb-card>
+            <!-- Content -->
+             <!-- <img src="/assets/images/stock market5.jpg" class="card-img-top" style="height: 200px;"/>  -->
+
+            <div class="text-black text-center align-items-center strong py-2 px-4 ">
+                <h3 class="card-title pt-2 pb-2" style="height: 5px;"><strong>Please Select Company</strong></h3>
+                <mat-form-field class="form-group " style="height:25px">
+                  <mat-select formControlName="company" class="form-control " style="min-width:150px;">
+                    <mat-option value="" disabled="true"
+                      class="text-center font-up font-bold wow fadeInDown waves-light"
+                      style="min-width:150px;height:40px ;">
+                      <b>---------</b> 
+                    </mat-option>
+                    <mat-option *ngFor="let c of companies" value={{c}}
+                      class="text-center font-up font-bold wow fadeInDown waves-light"
+                      style="min-width:150px;height:40px ;"> <b> {{c}}</b>
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <br>
+                <button mdbBtn color="black" class="predict waves-light mt-3 mb-3" mdbWavesEffect>
+                  View Result
+                </button>
+
+            </div>
+            <!-- Content -->
+          </mdb-card>
+          <!-- Card -->
+
+        </div>
+      </h5>
+
+
+
+
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,22 @@
+  .intro-header {
+    height: unset !important;
+  }
+
+  .view {
+    height: 100vh !important;
+  }
+ 
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #78909c !important;
+    }
+  }
+
+  @media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+      height: 700px;
+    }
+  }

@@ -1,0 +1,10 @@
+.intro-header {
+  height: unset !important;
+}
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+  }
